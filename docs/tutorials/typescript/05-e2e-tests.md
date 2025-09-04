@@ -228,7 +228,7 @@ You can also add tests to verify settings validation works correctly:
 @test "reject with multiple denied hostnames" {
   run kwctl run annotated-policy.wasm -r test_data/pod_with_hostname.json --settings-json '{"denied_hostnames": ["bad-host", "test-hostname", "forbidden-host"]}'
   
-  # this prints the output when one the checks below fails
+  # this prints the output when one of the checks below fails
   echo "output = ${output}"
 
   # request rejected
