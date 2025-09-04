@@ -156,7 +156,7 @@ This test verifies the policy accepts Pods when their hostname is not in the den
 @test "accept because the deny list is empty" {
   run kwctl run annotated-policy.wasm -r test_data/pod_with_hostname.json
   
-  # this prints the output when one the checks below fails
+  # this prints the output when one of the checks below fails
   echo "output = ${output}"
 
   # request accepted
