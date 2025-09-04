@@ -121,7 +121,7 @@ The template already provides several basic tests. Here are the existing tests w
 @test "reject because hostname is on deny list" {
   run kwctl run annotated-policy.wasm -r test_data/pod_with_hostname.json --settings-json '{"denied_hostnames": ["forbidden-host", "test-hostname"]}'
 
-  # this prints the output when one the checks below fails
+  # this prints the output when one of the checks below fails
   echo "output = ${output}"
 
   # request rejected
