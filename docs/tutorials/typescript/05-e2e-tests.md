@@ -264,7 +264,7 @@ This produces output like:
 ```console
 bats e2e.bats
 e2e.bats
- ✓ reject because hostname is on deny list
+ ✓ reject because hostname is on the deny list
  ✓ accept because hostname is not on the deny list
  ✓ accept because the deny list is empty
  ✓ accept because pod has no hostname set
