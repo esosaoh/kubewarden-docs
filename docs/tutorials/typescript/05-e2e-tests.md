@@ -139,7 +139,7 @@ This test ensures the policy rejects Pods when their hostname is in the deny lis
 @test "accept because hostname is not on the deny list" {
   run kwctl run annotated-policy.wasm -r test_data/pod_with_hostname.json --settings-json '{"denied_hostnames": ["forbidden-host"]}'
   
-  # this prints the output when one the checks below fails
+  # this prints the output when one of the checks below fails
   echo "output = ${output}"
 
   # request accepted
