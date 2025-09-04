@@ -173,7 +173,7 @@ This test ensures the policy accepts requests when no settings are provided.
 @test "accept because pod has no hostname set" {
   run kwctl run annotated-policy.wasm -r test_data/pod.json --settings-json '{"denied_hostnames": ["forbidden-host"]}'
   
-  # this prints the output when one the checks below fails
+  # this prints the output when one of the checks below fails
   echo "output = ${output}"
 
   # request accepted (no hostname to check)
