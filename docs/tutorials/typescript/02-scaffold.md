@@ -111,7 +111,7 @@ asset index.d.ts 11 bytes [compared for emit]
 webpack 5.101.3 compiled successfully in 1909 ms
 bats e2e.bats
 e2e.bats
- ✓ reject because hostname is on deny list
+ ✓ reject because hostname is on the deny list
  ✓ accept because hostname is not on the deny list
  ✓ accept because the deny list is empty
  ✓ accept because pod has no hostname set
