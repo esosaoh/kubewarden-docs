@@ -213,7 +213,7 @@ You can also add tests to verify settings validation works correctly:
 @test "accept valid settings" {
   run kwctl run annotated-policy.wasm -r test_data/pod.json --settings-json '{"denied_hostnames": ["host1", "host2"]}'
   
-  # this prints the output when one the checks below fails
+  # this prints the output when one of the checks below fails
   echo "output = ${output}"
 
   # settings are valid, request processed normally
