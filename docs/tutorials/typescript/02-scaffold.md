@@ -54,7 +54,7 @@ spec:
       image: nginx:latest
 ```
 
-## Scaffolding new policy project
+## Scaffolding a new policy project
 
 You can create a new policy project using the [template repository](https://github.com/kubewarden/js-policy-template). Select the "Use this template" green button near the top of the page and follow GitHub's wizard.
 
