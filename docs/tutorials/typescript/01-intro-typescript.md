@@ -22,7 +22,7 @@ Kubewarden uses [Javy](https://github.com/bytecodealliance/javy) (a Bytecode All
 
 > Javy takes your JavaScript code and executes it in a WebAssembly context. 
 >
-> It features an embedded QuickJS engine, compiled to WebAssembly, that can execute JavaScript. 
+> It features an embedded QuickJS engine compiled to WebAssembly that can execute JavaScript. 
 >
 > The project provides both a CLI and a set of APIs for embedding and customizing the behavior when running JavaScript in WebAssembly.
 
