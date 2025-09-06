@@ -16,7 +16,7 @@ doc-persona: [kubewarden-policy-developer]
 This tutorial covers creating a policy that validates the hostnames of Pod objects.
 
 The policy is to reject all Pods that use one or more hostnames on the deny list.
-The policy configuration is provided by the user through runtime settings.
+You provide policy configuration using runtime settings.
 
 To summarize, the policy settings should look like this:
 
