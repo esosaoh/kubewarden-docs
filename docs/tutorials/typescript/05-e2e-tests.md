@@ -20,7 +20,7 @@ This section shows how you can write end-to-end tests running against the actual
 Recall, you need these tools on your development machine:
 
 - **bats**: Used to write the tests and automate their execution.
-- **kwctl**: CLI tool provided by Kubewarden to run its policies outside of Kubernetes, among other actions. It's covered in [this section](../../testing-policies/index.md) of the documentation.
+- **kwctl**: CLI tool provided by Kubewarden to run its policies outside of Kubernetes, among other actions. It's covered in [the testing policies section](../testing-policies/index.md) of the documentation.
 
 ## Writing tests
 
