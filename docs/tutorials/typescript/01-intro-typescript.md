@@ -38,7 +38,7 @@ The Kubewarden project currently uses Javy for these reasons:
 Javy runs JavaScript in a sandboxed WebAssembly environment with certain constraints:
 
 - **WASI environment only**: Access limited to stdin/stdout/stderr and explicitly provided host capabilities
-- **No Node.js APIs**: Standard Node.js modules like `fs`, `http`, or `crypto` are not available
+- **No Node.js APIs**: Standard Node.js modules like `fs`, `http`, or `crypto` aren't available
 - **Limited standard library**: Only core JavaScript features and explicitly enabled APIs are accessible
 - **Single-threaded execution**: No support for Web Workers or multi-threading
 
