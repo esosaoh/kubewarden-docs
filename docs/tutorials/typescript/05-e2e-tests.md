@@ -182,7 +182,7 @@ This test ensures the policy accepts requests when no settings are provided.
 }
 ```
 
-This test verifies that Pods without hostnames are accepted regardless of the deny list.
+This test verifies that the policy accepts Pods without hostnames regardless of the deny list.
 
 ### Test 5: Accept non-Pod resources
 
