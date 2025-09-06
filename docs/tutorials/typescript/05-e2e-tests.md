@@ -287,6 +287,7 @@ Each test uses `kwctl` to run the policy and checks:
 The `echo "output = ${output}"` statements in each test help with debugging by showing the actual policy output when a test fails.
 
 ## Conclusion
+
 The end-to-end tests provide comprehensive coverage of the policy behavior by testing against the actual WebAssembly binary. This ensures that the policy works correctly when deployed in Kubewarden, not just in the TypeScript development environment.
 
 :::tip
