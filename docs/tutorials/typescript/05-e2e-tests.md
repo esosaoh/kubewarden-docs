@@ -199,7 +199,7 @@ This test verifies that the policy accepts Pods without hostnames regardless of 
 }
 ```
 
-This test ensures the policy accepts resources that are not Pods, since the policy only validates Pod hostnames.
+This test ensures the policy accepts resources that aren't Pods, since the policy only validates Pod hostnames.
 
 ## Extended test coverage
 
