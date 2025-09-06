@@ -119,7 +119,12 @@ The template already provides several basic tests. Here are the existing tests w
 
 ```bash
 @test "reject because hostname is on deny list" {
-  run kwctl run annotated-policy.wasm -r test_data/pod_with_hostname.json --settings-json '{"denied_hostnames": ["forbidden-host", "test-hostname"]}'
+  # Convert Pod definition to AdmissionRequest format
+  run kwctl scaffold admission-request --type Pod -r test_data/pod_with_hostname.json
+  [ "$status" -eq 0 ]
+  
+  # Run the policy with the AdmissionRequest
+  run kwctl run annotated-policy.wasm -r <(echo "$output") --settings-json '{"denied_hostnames": ["forbidden-host", "test-hostname"]}'
 
   # this prints the output when one of the checks below fails
   echo "output = ${output}"
@@ -137,7 +142,12 @@ This test ensures the policy rejects Pods when their hostname is in the deny lis
 
 ```bash
 @test "accept because hostname is not on the deny list" {
-  run kwctl run annotated-policy.wasm -r test_data/pod_with_hostname.json --settings-json '{"denied_hostnames": ["forbidden-host"]}'
+  # Convert Pod definition to AdmissionRequest format
+  run kwctl scaffold admission-request --type Pod -r test_data/pod_with_hostname.json
+  [ "$status" -eq 0 ]
+  
+  # Run the policy with the AdmissionRequest
+  run kwctl run annotated-policy.wasm -r <(echo "$output") --settings-json '{"denied_hostnames": ["forbidden-host"]}'
   
   # this prints the output when one of the checks below fails
   echo "output = ${output}"
@@ -154,7 +164,12 @@ This test verifies the policy accepts Pods when their hostname isn't in the deny
 
 ```bash
 @test "accept because the deny list is empty" {
-  run kwctl run annotated-policy.wasm -r test_data/pod_with_hostname.json
+  # Convert Pod definition to AdmissionRequest format
+  run kwctl scaffold admission-request --type Pod -r test_data/pod_with_hostname.json
+  [ "$status" -eq 0 ]
+  
+  # Run the policy with the AdmissionRequest
+  run kwctl run annotated-policy.wasm -r <(echo "$output")
   
   # this prints the output when one of the checks below fails
   echo "output = ${output}"
@@ -171,7 +186,12 @@ This test ensures the policy accepts requests when you provide no settings.
 
 ```bash
 @test "accept because pod has no hostname set" {
-  run kwctl run annotated-policy.wasm -r test_data/pod.json --settings-json '{"denied_hostnames": ["forbidden-host"]}'
+  # Convert Pod definition to AdmissionRequest format
+  run kwctl scaffold admission-request --type Pod -r test_data/pod.json
+  [ "$status" -eq 0 ]
+  
+  # Run the policy with the AdmissionRequest
+  run kwctl run annotated-policy.wasm -r <(echo "$output") --settings-json '{"denied_hostnames": ["forbidden-host"]}'
   
   # this prints the output when one of the checks below fails
   echo "output = ${output}"
@@ -188,7 +208,12 @@ This test verifies that the policy accepts Pods without hostnames regardless of 
 
 ```bash
 @test "accept non-pod resources" {
-  run kwctl run annotated-policy.wasm -r test_data/deployment.json --settings-json '{"denied_hostnames": ["forbidden-host"]}'
+  # Convert Deployment definition to AdmissionRequest format
+  run kwctl scaffold admission-request --type Deployment -r test_data/deployment.json
+  [ "$status" -eq 0 ]
+  
+  # Run the policy with the AdmissionRequest
+  run kwctl run annotated-policy.wasm -r <(echo "$output") --settings-json '{"denied_hostnames": ["forbidden-host"]}'
   
   # this prints the output when one of the checks below fails
   echo "output = ${output}"
@@ -211,7 +236,12 @@ You can also add tests to verify settings validation works correctly:
 
 ```bash
 @test "accept valid settings" {
-  run kwctl run annotated-policy.wasm -r test_data/pod.json --settings-json '{"denied_hostnames": ["host1", "host2"]}'
+  # Convert Pod definition to AdmissionRequest format
+  run kwctl scaffold admission-request --type Pod -r test_data/pod.json
+  [ "$status" -eq 0 ]
+  
+  # Run the policy with the AdmissionRequest
+  run kwctl run annotated-policy.wasm -r <(echo "$output") --settings-json '{"denied_hostnames": ["host1", "host2"]}'
   
   # this prints the output when one of the checks below fails
   echo "output = ${output}"
@@ -226,7 +256,12 @@ You can also add tests to verify settings validation works correctly:
 
 ```bash
 @test "reject with multiple denied hostnames" {
-  run kwctl run annotated-policy.wasm -r test_data/pod_with_hostname.json --settings-json '{"denied_hostnames": ["bad-host", "test-hostname", "forbidden-host"]}'
+  # Convert Pod definition to AdmissionRequest format
+  run kwctl scaffold admission-request --type Pod -r test_data/pod_with_hostname.json
+  [ "$status" -eq 0 ]
+  
+  # Run the policy with the AdmissionRequest
+  run kwctl run annotated-policy.wasm -r <(echo "$output") --settings-json '{"denied_hostnames": ["bad-host", "test-hostname", "forbidden-host"]}'
   
   # this prints the output when one of the checks below fails
   echo "output = ${output}"
@@ -240,7 +275,12 @@ You can also add tests to verify settings validation works correctly:
 
 ```bash
 @test "accept with empty denied hostnames array" {
-  run kwctl run annotated-policy.wasm -r test_data/pod_with_hostname.json --settings-json '{"denied_hostnames": []}'
+  # Convert Pod definition to AdmissionRequest format
+  run kwctl scaffold admission-request --type Pod -r test_data/pod_with_hostname.json
+  [ "$status" -eq 0 ]
+  
+  # Run the policy with the AdmissionRequest
+  run kwctl run annotated-policy.wasm -r <(echo "$output") --settings-json '{"denied_hostnames": []}'
   
   # this prints the output when one of the checks below fails
   echo "output = ${output}"

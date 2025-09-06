@@ -13,6 +13,11 @@ doc-persona: [kubewarden-policy-developer]
   <link rel="canonical" href="https://docs.kubewarden.io/tutorials/writing-policies/typescript/validation"/>
 </head>
 
+> [!IMPORTANT]  
+> **Critical: Do not write logging information to STDOUT**
+> 
+> Writing to STDOUT will break your policy. Instead, use STDERR for logging or the logging facility provided by the Kubewarden SDK. The policy's output to STDOUT must only contain the validation response.
+
 The validation logic goes in the `src/index.ts` file.
 
 Your validation logic needs to:
@@ -51,9 +56,15 @@ function validate(): void {
       return;
     }
 
+    // Only process Pod resources
+    if (resource.kind !== 'Pod') {
+      writeOutput(Validation.Validation.acceptRequest());
+      return;
+    }
+
     // NOTE 4
     // Extract hostname from the Pod spec
-    const hostname = getPodHostname(resource);
+    const hostname = getPodHostname(resource as Pod);
     const deniedHostnames = settings.denied_hostnames || [];
 
     // NOTE 5
@@ -128,21 +139,15 @@ This function extracts the hostname from a Pod resource:
 /**
  * Extracts the hostname from a Pod resource.
  *
- * @param {KubernetesResource} resource - The Kubernetes resource.
+ * @param {Pod} pod - The Pod resource.
  * @returns {string | undefined} The hostname if set, otherwise undefined.
  */
-function getPodHostname(resource: KubernetesResource): string | undefined {
-  // Only process Pod resources
-  if (resource.kind !== 'Pod') {
-    return undefined;
-  }
-  
-  const podSpec = resource.spec as PodSpec;
-  return podSpec.hostname;
+function getPodHostname(pod: Pod): string | undefined {
+  return pod.spec?.hostname;
 }
 ```
 
-This function ensures that only Pod resources are processed and safely extracts the hostname from the Pod's specification.
+This function safely extracts the hostname from the Pod's specification.
 
 ## Policy entry point
 
