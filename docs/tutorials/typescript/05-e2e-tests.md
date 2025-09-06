@@ -148,7 +148,7 @@ This test ensures the policy rejects Pods when their hostname is in the deny lis
 }
 ```
 
-This test verifies the policy accepts Pods when their hostname is not in the deny list.
+This test verifies the policy accepts Pods when their hostname isn't in the deny list.
 
 ### Test 3: Accept when no settings provided
 
