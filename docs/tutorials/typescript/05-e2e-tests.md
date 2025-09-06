@@ -165,7 +165,7 @@ This test verifies the policy accepts Pods when their hostname is not in the den
 }
 ```
 
-This test ensures the policy accepts requests when no settings are provided.
+This test ensures the policy accepts requests when you provide no settings.
 
 ### Test 4: Accept pods without hostnames
 
