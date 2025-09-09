@@ -10,7 +10,7 @@ doc-persona: [kubewarden-policy-developer]
 ---
 
 <head>
-  <link rel="canonical" href="https://docs.kubewarden.io/tutorials/writing-policies/typescript"/>
+  <link rel="canonical" href="https://docs.kubewarden.io/tutorials/writing-policies/intro-typescript"/>
 </head>
 
 :::note

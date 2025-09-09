@@ -10,7 +10,7 @@ doc-persona: [kubewarden-policy-developer]
 ---
 
 <head>
-  <link rel="canonical" href="https://docs.kubewarden.io/tutorials/writing-policies/typescript/end-to-end-testing"/>
+  <link rel="canonical" href="https://docs.kubewarden.io/tutorials/writing-policies/typescript/e2e-tests"/>
 </head>
 
 This section shows how you can write end-to-end tests running against the actual WebAssembly binary produced by the Javy compilation toolchain.
