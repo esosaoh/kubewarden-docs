@@ -1,6 +1,6 @@
 ---
 sidebar_label: Writing policies in TypeScript/JavaScript
-sidebar_position: 60
+sidebar_position: 010
 title: Writing policies in TypeScript/JavaScript
 description: A tutorial introduction to writing policies in TypeScript/JavaScript.
 keywords: [kubewarden, kubernetes, writing policies in TypeScript, writing policies in JavaScript]
