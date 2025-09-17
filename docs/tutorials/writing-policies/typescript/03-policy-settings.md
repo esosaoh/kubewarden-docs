@@ -13,10 +13,11 @@ doc-persona: [kubewarden-policy-developer]
   <link rel="canonical" href="https://docs.kubewarden.io/tutorials/writing-policies/typescript/policy-settings"/>
 </head>
 
-> [!IMPORTANT]  
-> **Critical: Do not write logging information to STDOUT**
-> 
-> Writing to STDOUT will break your policy. Instead, use STDERR for logging or the logging facility provided by the Kubewarden SDK. The policy's output to STDOUT must only contain the validation response.
+:::danger Critical: Do not write logging information to STDOUT
+
+Writing to STDOUT will break your policy. Instead, use STDERR for logging or the logging facility provided by the Kubewarden SDK. The policy's output to STDOUT must only contain the validation response.
+
+:::
 
 First, define the structure that holds the policy settings in `src/types.ts`.
 
@@ -71,8 +72,8 @@ function validate(): void {
 ```ts
 function validateSettings(): void {
   try {
-    const settingsJson = readInput();
-    const settings: PolicySettings = JSON.parse(settingsJson);
+    const settingsInput = Validation.Validation.readValidationRequest();
+    const settings: PolicySettings = settingsInput as PolicySettings;
     
     if (settings.denied_hostnames && !Array.isArray(settings.denied_hostnames)) {
       const errorResponse = new Validation.Validation.SettingsValidationResponse(

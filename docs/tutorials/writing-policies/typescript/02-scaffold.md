@@ -20,10 +20,10 @@ You provide policy configuration using runtime settings.
 
 To summarize, the policy settings should look like this:
 
-```json
-{
-  "denied_hostnames": [ "bad-host", "forbidden-host" ]
-}
+```yaml
+denied_hostnames:
+  - bad-host
+  - forbidden-host
 ```
 
 The policy rejects the creation of this Pod:
