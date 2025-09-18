@@ -96,7 +96,7 @@ function validate(): void {
 ### What each NOTE does:
 
 - **NOTE 1**: Read the incoming validation request using `readValidationRequest()`.
-- **NOTE 2**: Extract user-defined settings from the validation request (e.g., denied hostnames).
+- **NOTE 2**: Extract user-defined settings from the validation request (for example, denied hostnames).
 - **NOTE 3**: Parse the Kubernetes object (expected to be a Pod) from the request payload.
 - **NOTE 4**: Extract the hostname field from the Pod's spec section.
 - **NOTE 5**: Compare the hostname against the denied list and return an appropriate response.
