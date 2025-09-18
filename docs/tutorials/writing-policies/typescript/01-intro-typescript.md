@@ -79,7 +79,7 @@ The easiest way to get the complete toolchain is by using the Kubewarden JavaScr
 npm install kubewarden-policy-sdk
 ```
 
-The Javy plugin binary is automatically included and can be found at:
+The Javy plugin binary is automatically included and you can find it at:
 
 ```
 node_modules/kubewarden-policy-sdk/plugin/javy-plugin-kubewarden
