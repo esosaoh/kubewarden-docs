@@ -27,7 +27,7 @@ Recall, you need these tools on your development machine:
 You'll be using bats to write and automate your tests. Each test has the following steps:
 
 1. Run the policy using `kwctl run` directly with the JSON resource file.
-2. Perform assertions against the output produced by `kwctl`.
+1. Perform assertions against the output produced by `kwctl`.
 
 All the end-to-end tests go in a file called `e2e.bats`. The project scaffolding project already includes an example `e2e.bats`. You need to extend its contents to provide comprehensive test coverage for your policy behavior.
 
