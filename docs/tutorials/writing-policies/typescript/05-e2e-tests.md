@@ -286,9 +286,9 @@ e2e.bats
 
 Each test uses `kwctl` to run the policy and checks:
 
-- **Exit status**: `kwctl` should exit with status 0 for successful policy execution
-- **Allowed field**: The JSON output contains an `allowed` field indicating if the request was accepted
-- **Message content**: For rejected requests, the output contains a descriptive error message
+- **Exit status**: The command `kwctl` should exit with status 0 for successful policy execution.
+- **Allowed field**: The JSON output contains an `allowed` field indicating if the request was accepted.
+- **Message content**: For rejected requests, the output contains a descriptive error message.
 
 The `echo "output = ${output}"` statements in each test help with debugging by showing the actual policy output when a test fails.
 
