@@ -24,7 +24,7 @@ Recall, you need these tools on your development machine:
 
 ## Writing tests
 
-You'll be using bats to write and automate your tests. Each test has the following steps:
+You'll be using `bats` to write and automate your tests. Each test has the following steps:
 
 1. Run the policy using `kwctl run` directly with the JSON resource file.
 1. Perform assertions against the output produced by `kwctl`.
