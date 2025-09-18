@@ -26,7 +26,8 @@ Your validation logic needs to:
 - Get the relevant information from the incoming validation request.
 - Return a response based on the input and the policy settings.
 
-The incoming request contains a JSON object with the Kubernetes resource to validate, and you can access this data through the Kubewarden SDK's helper functions.
+The incoming request contains a JSON object with the Kubernetes resource to validate.
+You can access this JSON object data through the Kubewarden SDK's helper functions.
 
 ## The `validate` function
 
