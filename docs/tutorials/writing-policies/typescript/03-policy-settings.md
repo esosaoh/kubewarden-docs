@@ -13,9 +13,9 @@ doc-persona: [kubewarden-policy-developer]
   <link rel="canonical" href="https://docs.kubewarden.io/tutorials/writing-policies/typescript/policy-settings"/>
 </head>
 
-:::danger Critical: Do not write logging information to STDOUT
+:::danger Critical: Don't write logging information to STDOUT
 
-Writing to STDOUT will break your policy. Instead, use STDERR for logging or the logging facility provided by the Kubewarden SDK. The policy's output to STDOUT must only contain the validation response.
+Writing to STDOUT breaks your policy. Instead, use STDERR for logging or the logging facility provided by the Kubewarden SDK. The policy's output to STDOUT must only contain the validation response.
 
 :::
 
