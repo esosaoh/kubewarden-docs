@@ -107,7 +107,7 @@ The policy uses several helper functions to process the validation request:
 
 ### getKubernetesResource
 
-This function safely extracts the Kubernetes resource from the validation request:
+This function extracts the Kubernetes resource from the validation request:
 
 ```typescript
 /**
