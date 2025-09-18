@@ -150,7 +150,7 @@ function getPodHostname(pod: Pod): string | undefined {
 }
 ```
 
-This function safely extracts the hostname from the Pod's specification.
+This function extracts the hostname from the Pod's specification.
 
 ## Policy entry point
 
