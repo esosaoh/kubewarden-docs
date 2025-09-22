@@ -73,7 +73,7 @@ The Kubewarden project provides a [template JavaScript/TypeScript policy project
 
 ## Getting the toolchain
 
-The easiest way to get the complete toolchain is by using the Kubewarden JavaScript SDK, which includes the Javy compilation plugin:
+The easiest way to get the complete toolchain is by using the Kubewarden JavaScript SDK, which includes the Javy compilation plug-in:
 
 ```bash
 npm install kubewarden-policy-sdk
