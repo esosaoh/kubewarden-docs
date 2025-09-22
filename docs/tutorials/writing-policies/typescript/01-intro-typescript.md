@@ -35,10 +35,10 @@ Kubewarden uses [Javy](https://github.com/bytecodealliance/javy) (a Bytecode All
 
 The Kubewarden project currently uses Javy for these reasons:
 
-- Mature JavaScript engine (QuickJS) compiled to WebAssembly
-- Support for [WASI interface](../wasi/01-intro-wasi.md) through custom host functions
-- Smaller binary sizes compared to other JavaScript-to-WebAssembly solutions
-- Active development and maintenance by the Bytecode Alliance
+- Mature JavaScript engine (QuickJS) compiled to WebAssembly.
+- Support for [WASI interface](../wasi/01-intro-wasi.md) through custom host functions.
+- Smaller binary sizes compared to other JavaScript-to-WebAssembly solutions.
+- Active development and maintenance by the Bytecode Alliance.
 
 ## Javy limitations
 
