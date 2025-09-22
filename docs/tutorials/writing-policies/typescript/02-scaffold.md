@@ -40,7 +40,7 @@ spec:
       image: nginx:latest
 ```
 
-But, it accepts the creation of this Pod:
+However, it accepts the creation of this Pod:
 
 ```yaml
 apiVersion: v1
