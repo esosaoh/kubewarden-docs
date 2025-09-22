@@ -50,7 +50,7 @@ Javy runs JavaScript in a sandboxed WebAssembly environment with certain constra
 - **Single-threaded execution**: No support for Web Workers or multi-threading
 - **STDOUT restrictions**: Writing to STDOUT will break your policy - use STDERR for logging instead
 
-Despite these limitations, Javy provides sufficient capabilities for writing effective Kubewarden validation policies through the host capabilities system.
+Despite these limitations, Javy provides sufficient capabilities for writing effective Kubewarden validation policies through the hosts capabilities system.
 
 ## Tooling
 
