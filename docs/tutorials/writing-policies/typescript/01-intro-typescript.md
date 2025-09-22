@@ -56,9 +56,9 @@ Despite these limitations, Javy provides sufficient capabilities for writing eff
 
 Writing Kubewarden policies requires:
 
-- **Node.js**: Version 18 or higher
-- **npm**: For dependency management
-- **TypeScript**: Recommended for type safety (optional)
+- **Node.js**: Version 18 or higher.
+- **npm**: For dependency management.
+- **TypeScript**: Recommended for type safety (optional).
 
 :::warning
 Ensure you're using Node.js 18 or higher. Older versions may not be compatible with the compilation toolchain.
