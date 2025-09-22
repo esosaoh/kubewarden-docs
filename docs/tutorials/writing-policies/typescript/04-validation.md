@@ -132,7 +132,7 @@ function getKubernetesResource(validationRequest: ValidationRequest): Kubernetes
 }
 ```
 
-This function handles the case where the Kubernetes object is provided as a JSON string or as an already parsed object.
+This function handles the case where the Kubernetes object is a JSON string or an already parsed object.
 
 ### getPodHostname
 
