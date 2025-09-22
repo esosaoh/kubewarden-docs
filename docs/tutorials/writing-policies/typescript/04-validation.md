@@ -31,8 +31,8 @@ You can access this JSON object data through the Kubewarden SDK's helper functio
 
 ## The `validate` function
 
-The policy provided by the template already has a `validate` function in `src/index.ts`. 
-You can make use of it there, adding your logic to reject Pods with denied hostnames.
+The policy provided by the template already has a `validate` function in `src/index.ts`.
+You can use it there, adding your logic to reject Pods with denied hostnames.
 
 This is how the function should look once complete:
 
