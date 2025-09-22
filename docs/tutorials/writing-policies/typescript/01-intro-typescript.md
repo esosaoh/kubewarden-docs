@@ -89,6 +89,6 @@ node_modules/kubewarden-policy-sdk/plugin/javy-plugin-kubewarden
 
 During this tutorial you need these tools on your development machine:
 
-- **Node.js**: Version 18 or higher with npm for dependency management
-- [**`bats`**](https://github.com/bats-core/bats-core): Used to write the tests and automate their execution
+- **Node.js**: Version 18 or higher with npm for dependency management.
+- [**`bats`**](https://github.com/bats-core/bats-core): Used to write the tests and automate their execution.
 - [**`kwctl`**](https://github.com/kubewarden/kwctl/releases): CLI tool provided by Kubewarden to run its policies outside of Kubernetes, among other actions. It's covered in [the testing policies section](../../testing-policies/index.md) of the documentation.
