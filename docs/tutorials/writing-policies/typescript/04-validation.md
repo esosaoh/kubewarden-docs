@@ -171,4 +171,4 @@ switch (action) {
 }
 ```
 
-The Javy plug-in provides the `policyAction()` function indicating whether the policy should validate a resource or validate its settings.
+The Kubewarden Javy plug-in provides the `policyAction()` function indicating whether the policy should validate a resource or validate its settings.
