@@ -33,9 +33,9 @@ All the end-to-end tests go in a file called `e2e.bats`. The project scaffolding
 
 ## Test data files
 
-The end-to-end tests use JSON files containing Kubernetes resources. You should have these test data files:
+The end-to-end testscases test the creation of specific Kubernetes Resources.
 
-**`test_data/pod.json`** - A Pod without a hostname:
+For example, when testing the creation of a Pod resource:
 
 ```json
 {
@@ -55,61 +55,11 @@ The end-to-end tests use JSON files containing Kubernetes resources. You should 
 }
 ```
 
-**`test_data/pod_with_hostname.json`** - A Pod with a hostname:
+The end-to-end testcase uses a JSON file containing a Kubernetes AdmissionReview. These JSON object AdmissionReviews JSONs are the ones that are sent
+against the Kubernetes API so they get [validated](https://docs.kubewarden.io/reference/spec/validating-policies#an-example).
 
-```json
-{
-  "apiVersion": "v1",
-  "kind": "Pod",
-  "metadata": {
-    "name": "test-pod"
-  },
-  "spec": {
-    "hostname": "test-hostname",
-    "containers": [
-      {
-        "name": "nginx",
-        "image": "nginx:latest"
-      }
-    ]
-  }
-}
-```
-
-**`test_data/deployment.json`** - A non-Pod resource:
-
-```json
-{
-  "apiVersion": "apps/v1",
-  "kind": "Deployment",
-  "metadata": {
-    "name": "test-deployment"
-  },
-  "spec": {
-    "replicas": 1,
-    "selector": {
-      "matchLabels": {
-        "app": "test"
-      }
-    },
-    "template": {
-      "metadata": {
-        "labels": {
-          "app": "test"
-        }
-      },
-      "spec": {
-        "containers": [
-          {
-            "name": "nginx",
-            "image": "nginx:latest"
-          }
-        ]
-      }
-    }
-  }
-}
-```
+You can obtain AdmissionReviews JSON objects by using `kwctl scaffold admission-request`.
+Have a look at **`test_data/pod.json`** to see an AdmissionRequest JSON with a Pod.
 
 ## Basic test cases
 
