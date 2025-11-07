@@ -144,8 +144,8 @@ This test verifies that the policy accepts Pods without hostnames regardless of 
 
 ```bash
 @test "accept non-pod resources" {
-  run kwctl run annotated-policy.wasm -r test_data/deployment.json --settings-json '{"denied_hostnames": ["forbidden-host"]}'
-  
+  run kwctl run annotated-policy.wasm -r test_data/service.json --settings-json '{"denied_hostnames": ["forbidden-host"]}'
+
   # this prints the output when one of the checks below fails
   echo "output = ${output}"
 
