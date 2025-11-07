@@ -15,7 +15,7 @@ doc-persona: [kubewarden-policy-developer]
 
 :::note
 TypeScript/JavaScript support for WebAssembly is rapidly evolving.
-This page was last revised in September 2025.
+This page was last revised in November 2025.
 :::
 
 As stated on the [official website](https://www.typescriptlang.org/):
